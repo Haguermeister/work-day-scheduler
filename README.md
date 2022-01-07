@@ -1,9 +1,9 @@
 # Scheduler
 Work Day Scheduler Project Due : 9 Jan 2022
 
-## Github Repo Link : 
+## Github Repo Link : https://github.com/Haguermeister/work-day-scheduler
 
-## Webpage Link : 
+## Webpage Link : https://haguermeister.github.io/work-day-scheduler/
 
 ## Screenshot Below :
 ![alt text](./assets/images/ScreenShot.png)
