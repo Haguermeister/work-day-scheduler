@@ -64,3 +64,12 @@ for (var i = 0; i < timeBlocks.length; i++) {
         $("#" + timeBlocks[i].ref).addClass("bg-success text-white");
     }
 }
+
+$(".formListen").submit(function (e) {
+    e.preventDefault();
+    var targID = $(e.target)[0][0].id;
+    var targVal = $(e.target)[0][0].value;
+    timeBlocks[targID].value = targVal;
+    var storageItem = JSON.stringify(timeBlocks);
+    localStorage.setItem("timeBlocks", storageItem);
+})
