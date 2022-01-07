@@ -1,0 +1,16 @@
+.borderB{
+    border-bottom: 10px solid black;
+}
+.borderT{
+   border-top: 1px dotted grey;
+}
+.p2{
+   padding: .75rem;
+}
+.textD{
+    color: black;
+    font-weight: bold;
+}
+ .btn:hover{
+        color: black;
+}

@@ -48,3 +48,19 @@ if (!timeBlocks) {
         timeDisp: "5 PM"
     }];
 }
+$("#calendarDate").text(date.toLocaleString({ weekday: 'long', month: 'long', day: '2-digit' }));
+var main = $("#main");
+for (var i = 0; i < timeBlocks.length; i++) {
+    main.append(
+        $("<form>", { "class": "d-flex col-12 justify-content-center align-items-center formListen" }).append([
+            $("<div>", { "class": "p-3 col-2 bg-white borderT" }).text(timeBlocks[i].timeDisp),
+            $("<input>", { "class": "p-4 col-8 bg-secondary textD opacity-50 form-control" }, { "type": "text" }).attr("id", i).val(timeBlocks[i].value),
+            $("<button>", { "class": "p2 col-2 btn btn-primary" }, { "type": "submit" }).html('<i class="fa fa-save"></i>')
+        ]));
+    if (timeBlocks[i].time == date.hour) {
+        $("#" + timeBlocks[i].ref).addClass("bg-danger text-white");
+    }
+    else if (timeBlocks[i].time > date.hour) {
+        $("#" + timeBlocks[i].ref).addClass("bg-success text-white");
+    }
+}
